@@ -1,0 +1,40 @@
+/*For the thumbnail size*/
+.sphx-glr-thumbcontainer {
+  min-height: 370px !important;
+  margin: 10px !important;
+}
+.sphx-glr-thumbcontainer .figure {
+  width: 310px !important;
+}
+.sphx-glr-thumbcontainer img {
+  max-height: 300px !important;
+  max-width: 290px !important;
+  margin: 0px 10px 0px 10px;
+}
+.sphx-glr-thumbcontainer a.internal {
+  padding: 330px 10px 0 !important;
+}
+
+
+/*avoid overflowing of output*/
+body .sphx-glr-script-out .highlight {
+  overflow: auto;
+}
+/*sphinx gallery output cells dark mode support*/
+/* body[data-theme="dark"] .sphx-glr-script-out .highlight {
+  background-color: rgb(63, 63, 63);
+} */
+body[data-theme="dark"] .sphx-glr-script-out .highlight pre {
+  background-color: rgb(63, 63, 63);
+  color: #dfdfbf;
+  overflow: auto;
+}
+/*sphinx gallery output cells not light mode support (system default)*/
+/* body:not([data-theme="light"]) .sphx-glr-script-out .highlight {
+  background-color: rgb(63, 63, 63);
+} */
+body:not([data-theme="light"]) .sphx-glr-script-out .highlight pre {
+  background-color: rgb(63, 63, 63);
+  color: #dfdfbf;
+  overflow: auto;
+}
