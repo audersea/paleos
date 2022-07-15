@@ -24,8 +24,7 @@ df_samples["Section"] = df_samples["Section"].astype(int)
 print(df_samples)
 
 # %%
-# Begin by defining the location of our age model data and the selection of
-# depths for which to calculate ages.
+# Read in depth data for the core
 df_depth = pd.read_csv(depth_path)
 df_depth = df_depth.dropna(subset=["Section"])
 df_depth.loc[df_depth["Section"].str.contains("CC"), "Section"] = 20
@@ -33,7 +32,7 @@ df_depth["Section"] = df_depth["Section"].astype(int)
 print(df_depth)
 
 # %%
-# Do the merge.
+# Use pandas merging to put the two together and get sample depth
 df = pd.merge(
     df_samples,
     df_depth,
