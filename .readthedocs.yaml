@@ -1,0 +1,14 @@
+version: 2
+
+# sphinx configuration file
+sphinx:
+  configuration: docs/source/conf.py
+
+# build in additional formats such as PDF and ePub
+formats: all
+
+python:
+  version: 3.9
+  install:
+    - method: pip
+      path: .
